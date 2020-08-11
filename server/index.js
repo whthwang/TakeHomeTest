@@ -18,7 +18,6 @@ server.use(express.static(path.join(__dirname, '../client/public')));
 server.listen(port, () => console.log(`server is listening at port ${port}!`));
 
 server.get('/posts', (req, res) => {
-  console.log('hit here');
   fetch('http://jsonplaceholder.typicode.com/posts')
   .then(response => response.json())
   .then((data) => {
