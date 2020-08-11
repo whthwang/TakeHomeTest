@@ -14,13 +14,10 @@ app.use(parser.urlencoded({ extended: true }));
 //serves static html
 app.use(express.static(path.join(__dirname, '../client/public')));
 
-
-
 app.listen(port, () => console.log(`server is listening at port ${port}!`));
 
-//Routes
 
-//retrieve all posts from the database
+//Routes - retrieve all posts from the database
 app.get('/posts', (req, res) => {
   console.log('hi from get all')
   db.Posts.find({})
