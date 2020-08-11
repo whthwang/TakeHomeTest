@@ -2,7 +2,7 @@
 1. In the terminal and the root folder of the application, run the following commands:
   a. npm install
   b. npm run build
-  d. npm start
+  c. npm start
 
 
 # TakeHomeTest
