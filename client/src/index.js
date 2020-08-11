@@ -12,7 +12,7 @@ import App from './App';
 //middlewares
 const sagaMiddleware = createSagaMiddleware();
 const middlewares = [sagaMiddleware, logger];
-const store = createStore(PostReducer, applyMiddleware(...middlewares));
+export const store = createStore(PostReducer, applyMiddleware(...middlewares));
 sagaMiddleware.run(watchFetchPostsAsync);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById("root"));

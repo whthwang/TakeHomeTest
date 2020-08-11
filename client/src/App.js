@@ -18,7 +18,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentdidmount fires');
     this.props.fetchPosts();
   }
 
@@ -41,24 +40,17 @@ class App extends React.Component {
     if (e.target.className === 'title') {
       this.setState({
         editPost: { ...this.state.editPost, title: e.target.value }
-      }, () => console.log('new title info', this.state.editPost))
+      })
     } else if (e.target.className === 'body') {
       this.setState({
         editPost: { ...this.state.editPost, body: e.target.value }
-      }, () => console.log('new body info', this.state.editPost))
+      })
     }
   }
 
-  autoComplete() {
-    //this function will be passed down into the edit form and the search bar
-    //to satisfy the ability to type the title of an entry into the form and
-    //have it populate
-  }
-
   render() {
-    console.log("this.props", this.props);
     return (
-      <div>
+      <div className="component-app">
         <div>
           <form>
             <input placeholder="Enter Title Here" value={this.state.value} onChange={this.handleChange} />
@@ -106,7 +98,7 @@ class App extends React.Component {
             </div>
             <button onClick={() => {
               this.props.editPost(this.state.editPost);
-              this.setState({ view: 'all', searchValue: '', editPost: {} }, () => console.log('setstate completed'));
+              this.setState({ view: 'all', searchValue: '', editPost: {} });
             }}>Save</button>
           </div>)
         }

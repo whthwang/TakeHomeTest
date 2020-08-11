@@ -1,9 +1,3 @@
-//in the redux sagas, I will fetch the data
-//redux saga is a type of middleware, 
-//which takes redux actions dispatched,
-//run it through the middleware first,
-//and then it'll be dispatched to the reducer
-
 import { put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 import 'regenerator-runtime'; //needed to use generator functions

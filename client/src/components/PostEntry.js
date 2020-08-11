@@ -11,14 +11,12 @@ const PostEntry = (props) => {
         <p className="body">
           {body}
         </p>
-        {/* <button onClick={() => edit = true}>Edit</button> */}
       </div>
     )
   } else {
     return (
       <div>
         <EditForm title={title} body={body} />
-        {/* <button>Save</button> */}
       </div>
     )
   }
