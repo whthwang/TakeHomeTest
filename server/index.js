@@ -30,26 +30,3 @@ app.get('/posts', (req, res) => {
       res.status(404).send(error);
     })
 });
-
-//retrieve one post by title
-app.get('/posts/?title', (req, res) => {
-  console.log('hi from get one');
-  const { title } = req.params;
-  console.log('this is title', title);
-  db.Posts.find({ title: title })
-    .then((data) => {
-      console.log('data', data);
-      res.status(200).send(data);
-    })
-    .catch((error) => {
-      res.status(404).send(error);
-    })
-})
-
-// app.post('/api', (req, res) => {
-
-// });
-
-// app.update('/api/:id', (req, res) => {
-
-// });
