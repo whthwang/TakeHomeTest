@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server",
-    "build": "webpack -w -d"
+    "build": "webpack -w -d",
+    "seed": "node database/seed.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/whthwang/TakeHomeTest#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
@@ -30,7 +32,9 @@
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
     "redux-saga": "^1.1.3",
+    "regenerator-runtime": "^0.13.7",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
