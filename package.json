@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server",
     "build": "webpack -w -d",
     "seed": "node database/seed.js"
@@ -46,6 +46,8 @@
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
     "jest": "^26.3.0",
     "react-test-renderer": "^16.13.1"
   }
