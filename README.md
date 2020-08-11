@@ -23,3 +23,7 @@ Restful service providing API to manage the data to be pulled from http://jsonpl
 1. Use React, Redux with Sagas and Node Express Server
 2. Include Unit Tests for frontends and backends
 3. All dependencies should be publicly available or properly included with the project and referenced within the package.json
+
+store input in the local state
+store application changes like the array of items in the redux store.
+
