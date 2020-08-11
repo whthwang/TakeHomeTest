@@ -1,8 +1,7 @@
 import { FETCH_POSTS_SUCCESS, FETCH_POSTS_FAILURE, EDIT_POST } from './constants';
 
 const initialState = {
-  allPosts: [],
-  editPost: null
+  allPosts: []
 }
 
 const PostReducer = (state = initialState, { type, payload }) => {
